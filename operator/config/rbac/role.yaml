@@ -1,0 +1,184 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnbrowsers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnbrowsers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnbrowsers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnfrontends
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnfrontends/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnfrontends/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnschedulers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnschedulers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnschedulers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnstorages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnstorages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnstorages/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnworkers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnworkers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - buildbarn.io
+  resources:
+  - buildbarnworkers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch

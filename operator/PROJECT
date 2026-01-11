@@ -1,0 +1,19 @@
+domain: buildbarn.io
+repo: github.com/buildbarn/bb-deployments/operator
+resources:
+- group: buildbarn
+  kind: BuildbarnScheduler
+  version: v1alpha1
+- group: buildbarn
+  kind: BuildbarnWorker
+  version: v1alpha1
+- group: buildbarn
+  kind: BuildbarnStorage
+  version: v1alpha1
+- group: buildbarn
+  kind: BuildbarnFrontend
+  version: v1alpha1
+- group: buildbarn
+  kind: BuildbarnBrowser
+  version: v1alpha1
+version: "3"

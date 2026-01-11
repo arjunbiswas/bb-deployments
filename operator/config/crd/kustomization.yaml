@@ -1,0 +1,6 @@
+resources:
+- bases/buildbarn.io_buildbarnschedulers.yaml
+- bases/buildbarn.io_buildbarnworkers.yaml
+- bases/buildbarn.io_buildbarnstorages.yaml
+- bases/buildbarn.io_buildbarnfrontends.yaml
+- bases/buildbarn.io_buildbarnbrowsers.yaml
